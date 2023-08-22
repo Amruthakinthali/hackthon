@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preventive Health Care Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('Background.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+            /* background: linear-gradient(to right, #ff9966, #ff5e62); */
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .module {
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 280px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .module:hover {
+            transform: scale(1.05);
+        }
+
+        .module img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .module h2 {
+            color: #27ace5;
+            margin-bottom: 10px;
+        }
+
+        .module p {
+            margin-bottom: 20px;
+        }
+
+        .module button {
+            padding: 10px 20px;
+            background-color: #27ace5;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .module button:hover {
+            background-color: #ff9966;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Preventive Health Care Dashboard</h1>
+    </div>
+
+    <div class="dashboard">
+        <div class="module">
+            <img src="Eye1.jpg" alt="Eye Health Image">
+            <h2>Preventive Eye Health Care</h2>
+            <p>Answer some questions to get personalized suggestions for maintaining healthy vision.</p>
+            <button onclick="window.location.href='http://127.0.0.1:5000'">Start</button>
+        </div>
+
+        <div class="module">
+            <img src="Stress.jpg" alt="Stress Manager Image">
+            <h2>Stress Manager</h2>
+            <p>Evaluate your stress levels and get custom tips for stress management.</p>
+            <button onclick="window.location.href='http://127.0.0.1:8080'">Start</button>
+        </div>
+
+        <div class="module">
+            <img src="Health.jpg" alt="Health Tracker Image">
+            <h2>Medi Assistant</h2>
+            <p>Your 24/7 Health Partner: Say Hello to Medi Assistant 🕒❤️.</p>
+            <button onclick="window.location.href='http://127.0.0.1:8443'">Start</button>
+        </div>
+    </div>
+
+    <!-- <div class="footer">
+        <p>&copy; 2023 Preventive Health Care Dashboard</p>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stress Management Questionnaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9966, #ff5e62);        }
+
+    .container {
+      width: 60%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stress Management Questionnaire</h1>
+    <form action="/" method="post">
+      <label for="sleepSchedule">Sleep Schedule:</label>
+      <select id="sleepSchedule" name="sleepSchedule">
+        <option value="regular">Regular</option>
+        <option value="irregular">Irregular</option>
+      </select>
+
+      <label for="workBreaks">Scheduled Breaks:</label>
+      <select id="workBreaks" name="workBreaks">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="exerciseRoutine">Exercise Routine:</label>
+      <select id="exerciseRoutine" name="exerciseRoutine">
+        <option value="regular">Regular</option>
+        <option value="infrequent">Infrequent</option>
+      </select>
+
+      <label for="relaxationTechniques">Relaxation Techniques:</label>
+      <select id="relaxationTechniques" name="relaxationTechniques">
+        <option value="deep-breathing">Deep Breathing</option>
+        <option value="meditation">Meditation</option>
+        <option value="yoga">Yoga</option>
+        <option value="listening-music">Listening to Music</option>
+      </select>
+
+      <label for="screenTimeControl">Screen Time Control:</label>
+      <select id="screenTimeControl" name="screenTimeControl">
+        <option value="controlled">Controlled</option>
+        <option value="uncontrolled">Uncontrolled</option>
+      </select>
+
+      <label for="regularExercise">Regular Exercise:</label>
+      <select id="regularExercise" name="regularExercise">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="timeRelaxation">Time for Relaxation:</label>
+      <select id="timeRelaxation" name="timeRelaxation">
+        <option value="adequate">Adequate</option>
+        <option value="limited">Limited</option>
+      </select>
+
+      <label for="hobbiesRelaxation">Hobbies for Relaxation:</label>
+      <select id="hobbiesRelaxation" name="hobbiesRelaxation">
+        <option value="consistent">Consistent</option>
+        <option value="rarely">Rarely</option>
+      </select>
+
+      <label for="professionalHelp">Professional Help:</label>
+      <select id="professionalHelp" name="professionalHelp">
+        <option value="consulted">Consulted</option>
+        <option value="not-consulted">Not Consulted</option>
+      </select>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

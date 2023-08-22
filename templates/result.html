@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eye Health Assessment Result</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Eye Health Assessment Result</h1>
+    <h2>Prevention Recommendations:</h2>
+   
+      {{prevention_list}}
+        
+
+  </div>
+
+  <script>
+    // Add CSS dynamically
+    const styleElement = document.createElement('style');
+    styleElement.innerHTML = `
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff9966, #ff5e62); 
+            }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: #007bff;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
+      input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+    `;
+    document.head.appendChild(styleElement);
+  </script>
+</body>
+</html>

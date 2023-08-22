@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eye Health Assessment</title>
+<style>/* Reset default margin and padding for all elements */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    background: linear-gradient(to right,#53cdf2,  #c1dcf1); 
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(38, 37, 38);
+
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"]:last-child,
+  input[type="radio"]:last-child {
+    margin-right: 0;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  
+  /* Styling for checkbox labels */
+  label[for^="eyeStrainSymptoms"],
+  label[for^="eyeHealthHabits"] {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  /* Add some spacing for the checkbox groups */
+  label[for="eyeStrainSymptoms"],
+  label[for="eyeHealthHabits"] {
+    margin-top: 10px;
+  }
+  
+  /* Add some spacing for the last group of checkboxes */
+  label[for="breaksFromDevices"] {
+    margin-bottom: 20px;
+  }
+  
+  /* Flexbox for checkbox groups */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group label {
+    margin-right: 15px;
+  }
+  
+  /* Improved select dropdown styles */
+  select {
+    appearance: none;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  select option {
+    padding: 5px;
+  }
+  
+  /* Custom styles for checkboxes and radios */
+  input[type="checkbox"],
+  input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    background-color: #007bff;
+  }
+  
+  /* Custom styles for checkbox and radio labels */
+  .checkbox-label,
+  .radio-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .checkbox-label::before,
+  .radio-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+  }
+  
+  .checkbox-label::before {
+    border-radius: 3px;
+  }
+  
+  .radio-label::before {
+    border-radius: 50%;
+  }
+  
+  .checkbox-label::after,
+  .radio-label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + .checkbox-label::after,
+  input[type="radio"]:checked + .radio-label::after {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Eye Health Assessment</h1>
+    <form action="/submit" method="post">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="family_history">Family History of Eye Conditions:</label>
+      <input type="text" id="family_history" name="family_history">
+
+      <label for="screen_time">Screen Time (hours per day):</label>
+      <input type="number" id="screen_time" name="screen_time" required>
+
+      <label>Eye Strain Symptoms:</label>
+      <input type="checkbox" id="Eye fatigue" name="eye_strain_symptoms" value="Eye fatigue">
+      <label for="eyeFatigue">Eye fatigue</label>
+
+      <input type="checkbox" id="blurredVision" name="eye_strain_symptoms" value="Blurred vision">
+      <label for="blurredVision">Blurred vision</label>
+
+      <input type="checkbox" id="dryEyes" name="eye_strain_symptoms" value="Dry eyes">
+      <label for="dryEyes">Dry eyes</label>
+
+      <input type="checkbox" id="headaches" name="eye_strain_symptoms" value="Headaches">
+      <label for="headaches">Headaches</label>
+
+      <input type="checkbox" id="doubleVision" name="eye_strain_symptoms" value="Double vision">
+      <label for="doubleVision">Double vision</label>
+
+      <input type="checkbox" id="lightSensitivity" name="eye_strain_symptoms" value="Light sensitivity">
+      <label for="lightSensitivity">Light sensitivity</label>
+
+      <label for="visual_acuity">Visual Acuity:</label>
+      <input type="text" id="visual_acuity" name="visual_acuity">
+
+      <label for="color_vision">Color Vision:</label>
+      <select id="color_vision" name="color_vision">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="eye_protection">Eye Protection:</label>
+      <select id="eye_protection" name="eye_protection">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="eye_injuries_surgeries">History of Eye Injuries or Surgeries:</label>
+      <input type="text" id="eye_injuries_surgeries" name="eye_injuries_surgeries">
+
+      <label for="visual_field">Visual Field:</label>
+      <select id="visual_field" name="visual_field">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="contactLensUse">Contact Lens Use:</label>
+      <select id="contact_lens_use" name="contact_lens_use">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Eye Health Habits:</label>
+      <input type="checkbox" id="breaksFromDevices" name="eye_health_habits" value="Take breaks from digital devices">
+      <label for="breaksFromDevices">Taking regular breaks from digital devices using the 20-20-20 rule</label>
+
+      <input type="checkbox" id="artificialTears" name="eye_health_habits" value="Use artificial tears for dry eyes">
+      <label for="artificialTears">Using artificial tears or lubricating eye drops for dry eyes</label>
+
+      <input type="checkbox" id="regularEyeExams" name="eye_health_habits" value="Regular eye exams">
+      <label for="regularEyeExams">Regularly scheduling comprehensive eye exams</label>
+
+      <label for="physical_activity">Physical Activity (times per week):</label>
+      <input type="number" id="physical_activity" name="physical_activity" required>
+
+      <label for="dietary_habits">Dietary Habits:</label>
+      <select id="dietary_habits" name="dietary_habits">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="eye_alignment">Eye Alignment:</label>
+      <select id="eye_alignment" name="eye_alignment">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="vision_changes">Vision Changes:</label>
+      <select id="vision_changes" name="vision_changes">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="dry_eye_symptoms">Dry Eye Symptoms:</label>
+      <select id="dry_eye_symptoms" name="dry_eye_symptoms">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      <label for="sleep_quality">sleep quality </label>
+      <input type="number" id="sleep_quality" name="sleep_quality" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
